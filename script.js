@@ -1,5 +1,5 @@
 let CakeButton = document.getElementById("cake-button");
-let IceCreamButton = document.getElementById("ice cream-button");
+let IceCreamButton = document.getElementById("icecream-button");
 let yesSize = 16; //initial font size (in pixels)
 let clickCount = 0; //Counter to track how many times "No" is clicked
 
@@ -18,17 +18,17 @@ function showResponse(answer) {
 
         if (clickCount >= 5) {
             // If clicked 5 times, hide the Ice cream button
-            noButton.style.display = "none";
+            IceCreamButton.style.display = "none";
             response.innerHTML = "No more saying 'Ice cream'! 😆❤️";
         } else {
             response.innerHTML = "Are you sure? 😢 Please reconsider...";
 
-            // Increase the Yes button size
+            // Increase the Cake button size
             yesSize += 20 // Increases font size by 5px each time
-            yesButton.style.fontSize = yesSize + "px";
+            CakeButton.style.fontSize = yesSize + "px";
 
-            // Move the No button to a random position
-            moveIcecreamButton();
+            // Move the Ice Cream button to a random position
+            moveIceCreamButton();
         }
     }
 }
@@ -38,9 +38,9 @@ function moveIceCreamButton() {
     let x = Math.random() * (window.innerWidth - 100);
     let y = Math.random() * (window.innerHeight - 50);
 
-    noButton.style.position = "absolute";
-    noButton.style.left = `${x}px`;
-    noButton.style.top = `${y}px`;
+    IceCreamButton.style.position = "absolute";
+    IceCreamButton.style.left = `${x}px`;
+    IceCreamButton.style.top = `${y}px`;
 }
 
 // Heart burst animation

@@ -3,12 +3,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: pink;
+    background-color: rgb(103, 12, 122);
     font-family: Brush Script MT, Brush Script Std, cursive;
 }
 
 .card {
-    background: rgb(252, 148, 181);
+    background: rgb(158, 92, 206);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -18,7 +18,7 @@ body {
 }
 
 button{
-    background-color: red;
+    background-color: rgb(226, 53, 242);
     color: white;
     border: none;
     padding: 10px;
@@ -28,7 +28,7 @@ button{
 }
 
 button:hover {
-    background-color: darkred;
+    background-color: rgb(235, 55, 232);
 }
 
 @keyframes float {
@@ -43,7 +43,7 @@ button:hover {
     bottom: -10px;
     width: 20px;
     height: 20px;
-    background-color: rgb(229, 4, 4);
+    background-color: rgb(255, 255, 255);
     clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 75%, 20% 100%, 0% 35%);
     animation: float 5s linear infinite;
     opacity: 0;
