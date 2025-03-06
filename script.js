@@ -1,5 +1,5 @@
-let yesButton = document.getElementById("yes-button");
-let noButton = document.getElementById("no-button");
+let CakeButton = document.getElementById("cake-button");
+let IceCreamButton = document.getElementById("ice cream-button");
 let yesSize = 16; //initial font size (in pixels)
 let clickCount = 0; //Counter to track how many times "No" is clicked
 
@@ -8,18 +8,18 @@ function showResponse(answer) {
     let response = document.getElementById("response");
 
     if (answer) {
-        // User clicked "Yes" ❤️
+        // User clicked "Cake" ❤️
         triggerConfetti();
         response.innerHTML = "Yay! ❤️ Can't wait to celebrate!";
         
     } else {
-        // User clicked "No" 😢
+        // User clicked "Ice cream" 😢
         clickCount++; // Increase the click count
 
         if (clickCount >= 5) {
-            // If clicked 5 times, hide the No button
+            // If clicked 5 times, hide the Ice cream button
             noButton.style.display = "none";
-            response.innerHTML = "No more saying 'No'! 😆❤️";
+            response.innerHTML = "No more saying 'Ice cream'! 😆❤️";
         } else {
             response.innerHTML = "Are you sure? 😢 Please reconsider...";
 
@@ -28,13 +28,13 @@ function showResponse(answer) {
             yesButton.style.fontSize = yesSize + "px";
 
             // Move the No button to a random position
-            moveNoButton();
+            moveIcecreamButton();
         }
     }
 }
 
-//Function to randomly move the NO button on the screen
-function moveNOButton() {
+//Function to randomly move the Ice cream button on the screen
+function moveIceCreamButton() {
     let x = Math.random() * (window.innerWidth - 100);
     let y = Math.random() * (window.innerHeight - 50);
 
